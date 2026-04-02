@@ -23,16 +23,16 @@ Gazebo 负责仿真物理世界，ROS 2 控制器负责读状态、算命令，L
 
 ```mermaid
 flowchart LR
-    A[Gazebo World] --> B[Robot bp001]
-    B --> C[IMU / Joint State]
-    C --> D[ros_gz_bridge]
-    D --> E[/imu]
-    D --> F[/joint_states]
-    G[/cmd_vel] --> H[balance_controller]
+    A["Gazebo World"] --> B["Robot bp001"]
+    B --> C["IMU / Joint State"]
+    C --> D["ros_gz_bridge"]
+    D --> E["/imu"]
+    D --> F["/joint_states"]
+    G["/cmd_vel"] --> H["balance_controller"]
     E --> H
     F --> H
-    H --> I[/model/bp001/joint/joint_lw/cmd_vel]
-    H --> J[/model/bp001/joint/joint_rw/cmd_vel]
+    H --> I["/model/bp001/joint/joint_lw/cmd_vel"]
+    H --> J["/model/bp001/joint/joint_rw/cmd_vel"]
     I --> D
     J --> D
     D --> B
