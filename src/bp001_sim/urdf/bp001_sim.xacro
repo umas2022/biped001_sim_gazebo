@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="bp001">
+
+  <!-- 引入原始机器人描述 -->
+  <xacro:include
+    filename="$(find bp001_description)/urdf/bp001_description.xacro"/>
+
+  <!-- ========== Gazebo Sim 传感器与关节控制 ========== -->
+
+  <gazebo reference="base_link">
+    <sensor name="imu_sensor" type="imu">
+      <always_on>true</always_on>
+      <update_rate>400</update_rate>
+      <topic>/imu</topic>
+      <visualize>false</visualize>
+    </sensor>
+  </gazebo>
+
+  <!-- 轮子摩擦（防止打滑） -->
+  <gazebo reference="link_lw">
+    <mu1>1.0</mu1>
+    <mu2>1.0</mu2>
+  </gazebo>
+
+  <gazebo reference="link_rw">
+    <mu1>1.0</mu1>
+    <mu2>1.0</mu2>
+  </gazebo>
+
+  <!-- 输出 joint_state，方便 robot_state_publisher 闭环 -->
+  <gazebo>
+    <plugin
+      filename="gz-sim-joint-state-publisher-system"
+      name="gz::sim::systems::JointStatePublisher"/>
+  </gazebo>
+
+  <!-- 轮子关节速度控制器 -->
+  <gazebo>
+    <plugin
+      filename="gz-sim-joint-controller-system"
+      name="gz::sim::systems::JointController">
+      <joint_name>joint_lw</joint_name>
+      <use_force_commands>false</use_force_commands>
+      <p_gain>0.9</p_gain>
+      <i_gain>0.05</i_gain>
+    </plugin>
+  </gazebo>
+
+  <gazebo>
+    <plugin
+      filename="gz-sim-joint-controller-system"
+      name="gz::sim::systems::JointController">
+      <joint_name>joint_rw</joint_name>
+      <use_force_commands>false</use_force_commands>
+      <p_gain>0.9</p_gain>
+      <i_gain>0.05</i_gain>
+    </plugin>
+  </gazebo>
+
+</robot>

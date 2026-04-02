@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>bp001_description</name>
+  <version>1.0.0</version>
+  <description>
+    <p>Robot description package for the bp001 two-wheeled balance robot.</p>
+    <p>This package contains the URDF/Xacro model, meshes and visualization resources.</p>
+  </description>
+  <author>umas</author>
+  <maintainer email="1970313791@qq.com">umas</maintainer>
+  <license>BSD</license>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>robot_state_publisher</depend>
+  <depend>rviz2</depend>
+  <depend>joint_state_publisher_gui</depend>
+  <depend>gazebo_ros</depend>
+  <export>
+    <architecture_independent />
+    <build_type>ament_python</build_type>
+    <gazebo_ros gazebo_model_path="${prefix}/.."/>
+    <gazebo_ros gazebo_media_path="${prefix}/.."/>
+  </export>
+<build_depend>launch_ros</build_depend><exec_depend>launch_ros</exec_depend></package>
