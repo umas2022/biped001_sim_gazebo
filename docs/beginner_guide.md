@@ -78,10 +78,10 @@ flowchart LR
 
 第一次看项目，建议按这个顺序：
 
-1. 先看 [`readme.md`](/home/umas/prj/biped001_sim_gazebo/readme.md)
-2. 再看 [`docs/minimal_lqr_demo.md`](/home/umas/prj/biped001_sim_gazebo/docs/minimal_lqr_demo.md)
-3. 再看 [`docs/implementation.md`](/home/umas/prj/biped001_sim_gazebo/docs/implementation.md)
-4. 最后再读控制器源码 [`balance_controller.py`](/home/umas/prj/biped001_sim_gazebo/src/bp001_control/bp001_control/balance_controller.py)
+1. 先看 [`readme.md`](../readme.md)
+2. 再看 [`docs/minimal_lqr_demo.md`](./minimal_lqr_demo.md)
+3. 再看 [`docs/implementation.md`](./implementation.md)
+4. 最后再读控制器源码 [`balance_controller.py`](../src/bp001_control/bp001_control/balance_controller.py)
 
 如果你更关心启动链路而不是控制原理，也可以先看 `implementation` 再回来看最小 LQR 文档。
 
@@ -89,13 +89,13 @@ flowchart LR
 
 最值得先看的文件只有四个：
 
-1. [`sim.launch.py`](/home/umas/prj/biped001_sim_gazebo/src/bp001_sim/launch/sim.launch.py)
+1. [`sim.launch.py`](../src/bp001_sim/launch/sim.launch.py)
    看启动了哪些节点。
-2. [`bp001_sim.xacro`](/home/umas/prj/biped001_sim_gazebo/src/bp001_sim/urdf/bp001_sim.xacro)
+2. [`bp001_sim.xacro`](../src/bp001_sim/urdf/bp001_sim.xacro)
    看 Gazebo 插件、IMU 和关节控制怎么接。
-3. [`balance_controller.yaml`](/home/umas/prj/biped001_sim_gazebo/src/bp001_control/config/balance_controller.yaml)
+3. [`balance_controller.yaml`](../src/bp001_control/config/balance_controller.yaml)
    看控制器参数。
-4. [`balance_controller.py`](/home/umas/prj/biped001_sim_gazebo/src/bp001_control/bp001_control/balance_controller.py)
+4. [`balance_controller.py`](../src/bp001_control/bp001_control/balance_controller.py)
    看状态构造、LQR 求解和控制循环。
 
 ## 7. 常见误解

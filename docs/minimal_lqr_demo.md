@@ -2,7 +2,7 @@
 
 这份文档对应：
 
-[`examples/lqr_minimal_demo.py`](/home/umas/prj/biped001_sim_gazebo/examples/lqr_minimal_demo.py)
+[`examples/lqr_minimal_demo.py`](../examples/lqr_minimal_demo.py)
 
 它现在同时承担两件事：
 
@@ -286,8 +286,8 @@ x = a @ x + b.flatten() * u
 
 1. 先运行 `python3 examples/lqr_minimal_demo.py`
 2. 对照这份文档看 `A/B/Q/R/K`
-3. 再看 [`docs/implementation.md`](/home/umas/prj/biped001_sim_gazebo/docs/implementation.md)
-4. 最后再看正式控制器 [`balance_controller.py`](/home/umas/prj/biped001_sim_gazebo/src/bp001_control/bp001_control/balance_controller.py)
+3. 再看 [`docs/implementation.md`](./implementation.md)
+4. 最后再看正式控制器 [`balance_controller.py`](../src/bp001_control/bp001_control/balance_controller.py)
 
 ## 14. 一句话总结
 

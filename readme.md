@@ -51,10 +51,10 @@ ros2 topic pub /cmd_vel geometry_msgs/msg/Twist "{linear: {x: 0.08}, angular: {z
 文档现在收敛成 3 份：
 
 - 初学者导览：
-  [`docs/beginner_guide.md`](/home/umas/prj/biped001_sim_gazebo/docs/beginner_guide.md)
+  [`docs/beginner_guide.md`](docs/beginner_guide.md)
 - 最小 LQR 说明：
-  [`docs/minimal_lqr_demo.md`](/home/umas/prj/biped001_sim_gazebo/docs/minimal_lqr_demo.md)
+  [`docs/minimal_lqr_demo.md`](docs/minimal_lqr_demo.md)
 - 工程实现说明：
-  [`docs/implementation.md`](/home/umas/prj/biped001_sim_gazebo/docs/implementation.md)
+  [`docs/implementation.md`](docs/implementation.md)
 
 建议阅读顺序是：`beginner_guide -> minimal_lqr_demo -> implementation`。

@@ -4,11 +4,11 @@
 
 如果你还没建立整体地图，先看：
 
-[`docs/beginner_guide.md`](/home/umas/prj/biped001_sim_gazebo/docs/beginner_guide.md)
+[`docs/beginner_guide.md`](./beginner_guide.md)
 
 如果你想先理解 `A/B/Q/R/K` 和 `u = -Kx`，先看：
 
-[`docs/minimal_lqr_demo.md`](/home/umas/prj/biped001_sim_gazebo/docs/minimal_lqr_demo.md)
+[`docs/minimal_lqr_demo.md`](./minimal_lqr_demo.md)
 
 ## 1. 项目目标
 
@@ -34,7 +34,7 @@
 
 关键文件：
 
-- [`bp001_description.xacro`](/home/umas/prj/biped001_sim_gazebo/src/bp001_description/urdf/bp001_description.xacro)
+- [`bp001_description.xacro`](../src/bp001_description/urdf/bp001_description.xacro)
 
 ### `bp001_sim`
 
@@ -46,9 +46,9 @@
 
 关键文件：
 
-- [`empty.sdf`](/home/umas/prj/biped001_sim_gazebo/src/bp001_sim/worlds/empty.sdf)
-- [`bp001_sim.xacro`](/home/umas/prj/biped001_sim_gazebo/src/bp001_sim/urdf/bp001_sim.xacro)
-- [`sim.launch.py`](/home/umas/prj/biped001_sim_gazebo/src/bp001_sim/launch/sim.launch.py)
+- [`empty.sdf`](../src/bp001_sim/worlds/empty.sdf)
+- [`bp001_sim.xacro`](../src/bp001_sim/urdf/bp001_sim.xacro)
+- [`sim.launch.py`](../src/bp001_sim/launch/sim.launch.py)
 
 ### `bp001_control`
 
@@ -60,8 +60,8 @@
 
 关键文件：
 
-- [`balance_controller.py`](/home/umas/prj/biped001_sim_gazebo/src/bp001_control/bp001_control/balance_controller.py)
-- [`balance_controller.yaml`](/home/umas/prj/biped001_sim_gazebo/src/bp001_control/config/balance_controller.yaml)
+- [`balance_controller.py`](../src/bp001_control/bp001_control/balance_controller.py)
+- [`balance_controller.yaml`](../src/bp001_control/config/balance_controller.yaml)
 
 ## 3. 启动链路
 
@@ -166,7 +166,7 @@ Gazebo 扩展中主要补充了：
 
 相关参数主要在：
 
-- [`balance_controller.yaml`](/home/umas/prj/biped001_sim_gazebo/src/bp001_control/config/balance_controller.yaml)
+- [`balance_controller.yaml`](../src/bp001_control/config/balance_controller.yaml)
 
 重点包括：
 
